@@ -247,7 +247,7 @@
                  "y":182
                 }, 
                 {
-                 "height":16,
+                 "height":7,
                  "id":81,
                  "name":"exit-house",
                  "rotation":0,
@@ -255,7 +255,7 @@
                  "visible":true,
                  "width":32,
                  "x":112,
-                 "y":192
+                 "y":201
                 }, 
                 {
                  "height":16,
@@ -299,8 +299,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":160,
-                 "y":96
+                 "x":124,
+                 "y":130
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -318,7 +318,7 @@
         {
          "columns":40,
          "firstgid":1,
-         "image":"..\/sprites\/Inner.png",
+         "image":"..\/..\/games\/WhispringIsles\/sprites\/Inner.png",
          "imageheight":400,
          "imagewidth":640,
          "margin":0,

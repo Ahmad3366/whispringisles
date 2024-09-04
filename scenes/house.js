@@ -1,3 +1,4 @@
+import { addPlayer } from "../entities/player";
 import { checkTransition, colorizeBackground, drawColliders, drawTiles, fetchMapData } from "../utils";
 
 export default async function house(transition) {
@@ -14,7 +15,8 @@ export default async function house(transition) {
 		if (layer.name == 'spawns') {
 			for (const o of layer.objects) {
 				if (o.name == 'player') {
-					// todo: add player
+					const player = addPlayer(vec2(o.x, o.y + 16))
+					player.setMovment()
 				}
 			}
 			continue

@@ -24,4 +24,4 @@ for (const key in scenes) {
 	scene(key, scenes[key])
 }
 
-go('intro')
+go('house')

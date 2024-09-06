@@ -23,7 +23,7 @@ export default async function worldMap(transition) {
 			continue
 		}
 
-		drawTiles(layer, 'overworld')
+		drawTiles(layer, 'overworld', true)
 	}
 
 	camScale(3.5)

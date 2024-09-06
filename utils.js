@@ -66,7 +66,7 @@ export async function fetchMapData(path) {
 	return await mapData.json()
 }
 
-export async function drawTiles(layer, tileset, hideOutsideViewTiles = false) {
+export async function drawTiles(layer, tileset) {
   let nbOfDrawnTiles = 0;
   const tilePos = vec2(0, 0);
   let tiles = []
@@ -99,25 +99,14 @@ export async function drawTiles(layer, tileset, hideOutsideViewTiles = false) {
   }
 
   onDraw(() => {
-		const player = get('player')[0]
+
     for (const tile of tiles) {
 
-			if (hideOutsideViewTiles) {
-				if (vec2(tile.x, tile.y).dist(player.pos) < 226) {
-					drawSprite({
-						sprite: tileset,
-						pos: vec2(tile.x, tile.y),
-						frame: tile.tileFrame
-					})
-				}
-			} else {
-				drawSprite({
-					sprite: tileset,
-					pos: vec2(tile.x, tile.y),
-					frame: tile.tileFrame
-				})
-			}
-			
+      drawSprite({
+        sprite: tileset,
+        pos: vec2(tile.x, tile.y),
+        frame: tile.tileFrame
+      })
       
       // drawUVQuad({
       //   pos: vec2(tile.x, tile.y),

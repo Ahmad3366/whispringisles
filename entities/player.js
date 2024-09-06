@@ -7,6 +7,11 @@ export function addPlayer(position) {
 		body(),
 		'player',
 		{
+			add() {
+				this.onCollide('exit-house', () => {
+					go('worldMap')
+				})
+			},
 			setMovment() {
 				onKeyDown('s', () => {
 					this.move(0, 90)

@@ -4,10 +4,10 @@ export default function loadAssets() {
 	loadRoot('./sprites/')
 	loadSprite('logo', 'Logo.png')
 
-	// loadSprite('overworld', 'Overworld.png', {
-	// 	sliceX: 40,
-	// 	sliceY: 36
-	// })
+	loadSprite('overworld', 'Overworld.png', {
+		sliceX: 40,
+		sliceY: 36
+	})
 	loadSprite('inner', 'Inner.png', {
 		sliceX: 40,
 		sliceY: 25

@@ -137,3 +137,16 @@ export function drawColliders(layer) {
     ])
   }
 }
+
+export function showFps() {
+	add([
+		text(''),
+		pos(10),
+		fixed(),
+		{
+			update() {
+				this.text = debug.fps()
+			}
+		}
+	])
+}

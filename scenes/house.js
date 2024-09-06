@@ -1,5 +1,5 @@
 import { addPlayer } from "../entities/player";
-import { checkTransition, colorizeBackground, drawColliders, drawTiles, fetchMapData } from "../utils";
+import { checkTransition, colorizeBackground, drawColliders, drawTiles, fetchMapData, showFps } from "../utils";
 
 export default async function house(transition) {
 	checkTransition(transition)
@@ -27,4 +27,7 @@ export default async function house(transition) {
 
 	camScale(3.5)
 	camPos(150, 120)
+
+
+	showFps()
 }

@@ -24,11 +24,23 @@ export async function addPartical(position) {
 	])
 
 	partical.onStateEnter('tl', async () => {
-		await tween(partical.pos.x, partical.pos.x - partical.moveValue, 1, x => partical.pos.x = x, easings.easeInOutCubic)
+		await tween(
+			partical.pos.x, 
+			partical.pos.x - partical.moveValue, 
+		  1, x => partical.pos.x = x, 
+			easings.easeInOutCubic
+		)
+		
 		partical.enterState('tr')
 	})
 	partical.onStateEnter('tr', async () => {
-		await tween(partical.pos.x, partical.pos.x + partical.moveValue, 1, x => partical.pos.x = x, easings.easeInOutCubic)
+		await tween(
+			partical.pos.x, 
+			partical.pos.x + partical.moveValue, 
+			1, x => partical.pos.x = x, 
+			easings.easeInOutCubic
+		)
+
 		partical.enterState('tl')
 	})
 }
